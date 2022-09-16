@@ -1,0 +1,9 @@
+.cote {
+    background: linear-gradient(#08083d, #000000d7), url('../assets/img/eleve.jpg');
+    background-size: cover;
+}
+
+.inpu_group input {
+    min-width: 200px;
+    display: none!important;
+}
