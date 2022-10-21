@@ -22,8 +22,8 @@ $bdd=seconnecterDb();
 <body>
 
         <?php require('../assets/navbar.php'); ?>
-        <div class="haut">
-            <div class="position-absolute top-50 mx-5 fixed-top">
+        <div class="haut position-relative">
+            <div class="container d-flex flex-column justify-content-center align-items-center" style="margin-top: 50px ; min-height:400px">
             <h1 class="fs-1 text-white fw-bold"><i class="fa fa-file"></i> Epreuves de <?php 
         $req3=$bdd->prepare("SELECT libelle_matiere FROM matiere WHERE id_matiere=?");
         $req3->execute([htmlspecialchars($_GET['idmatiere'])]);
@@ -38,7 +38,7 @@ $bdd=seconnecterDb();
         $req3->execute([htmlspecialchars($_GET['idmatiere'])]);
         $donnee=$req3->fetch(); echo $donnee['libelle_matiere'];?> disponibles</p>
             </div>
-        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
     
     <div class="container-fluid">
     <div class="row">

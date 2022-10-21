@@ -147,12 +147,15 @@ if (isset($_POST['avatar_change'])) {
                               class="account-file-input"
                               hidden
                               name="avatar"
+                              onchange="readFilesAndDisplayPreview(this.files)"
                             />
+                            
+
                           </label>
-                          <button type="submit" name="avatar_change" class="btn btn-primary account-image-reset mb-4">
-                            <i class="bx bx-reset d-block d-sm-none"></i>
-                            <span class="d-none d-sm-block">Changer</span>
-                          </button>
+                          <div class="mb-3" id="list1">
+
+                            </div>
+                          
 
                           <p class="text-muted mb-0" id="nom_avatar">Allowed JPG, GIF or PNG. Max size of 800K</p>
                         </div>
@@ -257,6 +260,42 @@ if (isset($_POST['avatar_change'])) {
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
+    <script>
+            /* Cette fonction permet d'afficher une vignette pour chaque image sélectionnée */
+            function readFilesAndDisplayPreview(files) {
+                let imageList = document.querySelector('#list1'); 
+                let imageList2 = document.querySelector('#list2'); 
+                imageList.innerHTML = "";
+                
+                for ( let file of files ) {
+                    let reader = new FileReader();
+                    
+                    reader.addEventListener( "load", function( event ) {
+                        let span = document.createElement('span');
+                        span.innerHTML = '<img height="60" src="' + event.target.result + '" />   <button type="submit" name="avatar_change" class="btn btn-primary account-image-reset mb-4"><i class="bx bx-reset d-block d-sm-none"></i><span class="d-none d-sm-block">Changer</span> </button>';
+                        imageList.appendChild( span );
+                    });
+
+                    reader.readAsDataURL( file );
+                }
+            }
+            function readFilesAndDisplayPreview2(files) {
+                let imageList = document.querySelector('#list2'); 
+                imageList.innerHTML = "";
+                
+                for ( let file of files ) {
+                    let reader = new FileReader();
+                    
+                    reader.addEventListener( "load", function( event ) {
+                        let span = document.createElement('span');
+                        span.innerHTML = '<img height="60" src="' + event.target.result + '" />';
+                        imageList.appendChild( span );
+                    });
+
+                    reader.readAsDataURL( file );
+                }
+            }
+        </script>
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
     <script src="../assets/vendor/js/bootstrap.js"></script>

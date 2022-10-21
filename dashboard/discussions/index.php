@@ -355,17 +355,17 @@ if($nforum>0){
 
                             </div>
                             <div class="input-place m-1 d-flex w-100" style="z-index: 999984 !important;bottom:3%;max-width:100vw;left:0%;">
-                                <div class="input" style="width:10%">
+                                <div class="input d-flex flex-column justify-content-center align-items-center" style="width:10%">
                                   <input type="file" name="imageUpload" accept="image/*" hidden onchange="readFilesAndDisplayPreview(this.files)" id="imageUpload">
-                                    <label class="btn btn-primary w-100 h-100" for="imageUpload">
+                                    <label class="btn btn-primary rounded-3" for="imageUpload">
                                         <i class="bx bx-image"></i>
                                     </label>
                                 </div>
                                 <div class="input" style="width:80%">
                                     <textarea name="message" id="message_text" placeholder="Votre réponse ici......." id="" class="form-control w-100 h-100"></textarea>
                                 </div>
-                                <div class="input" style="width:10%">
-                                    <button class="btn btn-primary w-100  h-100" type="button" id="message_envoie">
+                                <div class="input d-flex flex-column justify-content-center align-items-center" style="width:10%">
+                                    <button class="btn btn-primary rounded-2" type="button" id="message_envoie">
                                         <i class="bx bx-paper-plane"></i>
                                     </button>
                                     <input type="hidden" value="<?=$_SESSION['id']?>" name="id_e" id="id_expediteur" >

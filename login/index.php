@@ -47,8 +47,8 @@
               
               <h2 class=" text-center mb-3">Connexion</h2>
 
-                <form action="login.php" method="post" id="form " class="d-flex flex-column">
-                    <div class="input_group mb-2">
+                <form action="login.php" method="post" id="form " class="d-flex flex-column needs-validation" novalidate>
+                    <!-- <div class="input_group mb-2">
                         <input type="email" name="loginmail" id="email " class="form-control ">
                         <label for="email">Email</label>
                     </div>
@@ -56,7 +56,17 @@
                         <input type="password" name="loginpass" id="password "
                             class="form-control ">
                         <label for="password ">Mot de passe</label>
-                    </div>
+                    </div> -->
+                    <div class="form-floating mb-3 mt-3">
+                             <input type="text" class="form-control" id="floatingInput" name="loginmail" placeholder="name@example.com" required>
+                             <label for="floatingInput"> Email </label>
+                         </div>
+                         
+                         <div class="form-floating mb-3">
+                             <input type="password" class="form-control" id="floatingPassword"  name="loginpass" placeholder="Password" required>
+                             <label for="floatingPassword">Mot de passe</label>
+                         </div>
+                         
                     <input
                         class="btn bg-access text-white text-center col-8 py-2 rounded-pill mt-3 "
                         type="submit" value="Se connecter" />
@@ -77,6 +87,27 @@
     <script src="../assets/js/jquery-3.6.0.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})();
+
        // $(document).ready(
             /*
                         $(" #email, #password").click(

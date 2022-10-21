@@ -39,7 +39,7 @@ session_start();
     }
     </style>
 </head>
-<body>
+<body class="w-100" style="overflow-x: hidden;">
     <?php require('../assets/navbar.php'); ?>
     <div class="contaner-fluid banner">
         <div class="container py-5">
@@ -137,25 +137,25 @@ session_start();
 
 
     <!--what we do-->
-    <div class="container-fluid mt-4 shadow py-3 mb-4">
-        <h1 class="h1 text-center text-access">
+    <div class="container-fluid mt-4 shadow py-3 mb-4 w-100">
+        <h1 class="h1 text-center text-access mb-3">
           Que faisons-nous ?
         </h1>
-        <p class="text-center"> EasyAccess a été conçue spécialement pour vous permettre de :
+        <p class="text-center text-access"> EasyAccess a été conçue spécialement pour vous permettre de :
         </p>
         <div class="row mt-2 mb-3">
             <div class="col-lg-4 d-flex justify-content-center align-items-center flex-column mb-sm-5 py-sm-2 text-center"> <i class="fa-solid fa-download fa-3x text-primary"></i>
-                <div> Télécharger des épreuves des compositions et examens passés de toutes les matières</div>
+                <div  class="text-center mb-5"> Télécharger des épreuves des compositions et examens passés de toutes les matières</div>
             </div>
             <div class="col-lg-4 d-flex justify-content-center align-items-center flex-column mb-sm-5 py-sm-2"> <i class="fa-solid fa-dice-d6 fa-3x  text-primary"></i>
-                <div>Vous détendre avec des jeux éducatifs utiles pour vos révisions</div>
+                <div class="text-center mb-5">Vous détendre avec des jeux éducatifs utiles pour vos révisions</div>
             </div>
             <div class="col-lg-4 d-flex justify-content-center align-items-center flex-column mb-sm-5 py-sm-2 text-center"> <i class="fa-solid fa-comments fa-3x  text-primary"></i>
-                <div>Discuter avec des personnes expérimentées et obtenir de l'aide sur les problèmes que vous rencontrez sur chaque épreuve</div>
+                <div class="text-center mb-5">Discuter avec des personnes expérimentées et obtenir de l'aide sur les problèmes que vous rencontrez sur chaque épreuve</div>
             </div>
         </div>
     </div>                                            
-    <div class="container-fluid mt-3 py-4 bg-access text-white mb-5 shadow">
+    <div class="container-fluid mt-3 py-4 bg-access text-white mb-5 shadow w-100">
         <h1 class="h1 text-center">
            Votre réussite passe par ici !
         </h1>
@@ -170,11 +170,11 @@ session_start();
         </div>
     </div>
 
-    <div class="container mb-4">
+    <div class="container mb-4 w-100">
         <div class="row">
             <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <div class="card shadow" style="width: 100%;">
-                    <img src="../assets/img/eleve.jpg" class="card-img-top" alt="...">
+                <div class="card shadow w-100" style="">
+                    <img src="../assets/img/eleve.jpg" class="card-img-top w-100" alt="...">
                     <div class="card-body">
                         <p class="card-text">Inscris-toi, pour avoir la possibilité de poser tes problèmes dans le forum et profiter d'autres fonctionnalités de la plateforme</p>
                         <a href="../register/index.php" class="btn bg-access text-white py-2">Inscris-toi</a>
@@ -182,8 +182,8 @@ session_start();
                 </div>
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <div class="card shadow" style="width: 100%;">
-                    <img src="../assets/img/etudiant.jpg" class="card-img-top" alt="...">
+                <div class="card shadow w-100">
+                    <img src="../assets/img/etudiant.jpg" class="card-img-top w-100" alt="...">
                     <div class="card-body">
                         <p class="card-text">Déjà inscrit ? Connectes-toi vite pour découvrir les fonctionnalités auxquelles tu as accès</p>
                         <a href="../login/index.php" class="btn bg-access text-white py-2">Connectes-toi</a>
@@ -192,13 +192,14 @@ session_start();
             </div>
         </div>
     </div>
-    <div class="row">
-            <div class="m-3">
+    <div class="container">
                 <h2>Récemment ajouté...</h2>
             </div>
+            
             <div class="container bigcontainer">
+                
         <?php 
-  $req = $bdd->query('SELECT * FROM epreuves INNER JOIN matiere ON matiere.id_matiere=epreuves.id_matiere
+   $req = $bdd->query('SELECT * FROM epreuves INNER JOIN matiere ON matiere.id_matiere=epreuves.id_matiere
                                            INNER JOIN classe ON classe.id_classe=epreuves.id_classe
                                            WHERE etat=1  ORDER BY createdAt DESC LIMIT 15 ');
     while($data=$req->fetch())
@@ -212,10 +213,10 @@ session_start();
             </div>';}
             ?>
         </div>
-    </div>
+    
 
     
-    <footer>
+    <footer class="w-100">
         <?php require('../assets/footer.php'); ?>
     </footer>
     <script src="../assets/js/script.js"></script>

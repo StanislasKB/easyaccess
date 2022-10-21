@@ -9,5 +9,11 @@
 }
 
 .carte {
-    min-width: 500px;
+    min-width: 300px;
+}
+
+@media screen and (max-width: 800px) {
+    .carte {
+        width: 100%;
+    }
 }

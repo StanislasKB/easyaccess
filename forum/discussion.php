@@ -42,7 +42,7 @@ if (isset($_GET['id_forum'])) {
     </div>
     <div class="container mt-5">
         <div class="row ">
-            <div class="col-md-2  border-1 shadow bg-light">
+            <div class="col-md-2  border-1 shadow shadow-lg bg-light mb-sm-5">
                 <div><a href="index.php" class=" text-decoration-none text-black"><i class="fa-regular fa-folder-open"></i> Toutes les discussions</a></div>
                 <div><a href="index.php?classe=Sixième" class=" text-decoration-none text-black"><i class="fa-regular fa-folder-open"></i> Sixième</a></div>
                 <div><a href="index.php?classe=Cinquième" class=" text-decoration-none text-black"><i class="fa-regular fa-folder-open"></i> Cinquième</a></div>
@@ -52,15 +52,15 @@ if (isset($_GET['id_forum'])) {
                 <div><a href="index.php?classe=Première" class=" text-decoration-none text-black"><i class="fa-regular fa-folder-open"></i> Première</a></div>
                 <div><a href="index.php?classe=Terminale" class=" text-decoration-none text-black"><i class="fa-regular fa-folder-open"></i> Terminale</a></div>
   
-                <a href="../dashboard/discussions/index.php?id_forum=<?=$_GET['id_forum']  ?>" class="btn btn-info mt-5">Repondre</a>
+                <a href="../dashboard/discussions/index.php?id_forum=<?=$_GET['id_forum']  ?>" class="btn btn-info mt-5 mb-5">Repondre</a>
             </div>
-            <div class="col-md-9">
-                <div class="container-xxl d-flex flex-column position-relative container-p-y" style="height: 100vh; overflow: auto">
+            <div class="col-md-10">
+                <div class="container-fluid w-100 p-0" style="height: 100vh;">
                     <!-- Bootstrap Dark Table -->
-                    <div class="card" style="height:10% ;">
+                    <div class="card m-0 w-100 mt-5" style="height:10% ; width:100%">
                         <h5 class="card-header">Discussions</h5>
                     </div>
-                    <div class="card my-3 overflow-auto" style="height:80% ;">
+                    <div class="card my-3 overflow-auto w-100 m-0" style="height:90% ; width:100%">
                         <div class="question">
                             <div class="p-3">
                                 <div class="col-md mb-4 mb-md-0">

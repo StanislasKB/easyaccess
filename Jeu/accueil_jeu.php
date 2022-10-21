@@ -35,7 +35,7 @@ else
     <div class=" ">
         <div class="container about d-flex justify-content-center align-items-center shadow">
             <div class=" container ">
-                <h1 class="fs-1  fw-bold text-white">Forum</h1>
+                <h1 class="fs-1  fw-bold text-white">Jeux</h1>
 
             </div>
         </div>
@@ -45,10 +45,10 @@ else
         <div class="border-1 shadow p-4 bg-light mb-3">
       <a href="discussion.php?id_forum='.$data['id_forum'].'" class="text-decoration-none text-black">
         <div class=" position-relative">
-            <div class="forum-header  px-2 py-2"><h5 class="h5">Jeu Arithmétique</h5></div>
-            <div>Description</div>
+            <div class="forum-header  px-2 py-2"><h5 class="h5">Aucun jeu pour le moment</h5></div>
+            <!-- <div>Description</div>
             <a href="jeu-arithmetique.php" class="btn btn-primary mt-2">Jouer maintenant</a>
-             </div>
+             </div> -->
       </a>
 
       </div>

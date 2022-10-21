@@ -69,7 +69,7 @@ if(isset($_SESSION['id']))
                                             <p class="mb-4">
                                                 Télecharger et téléverser des épreuves dans easyacess <span class="fw-bold">72%</span>.
 </p>
-                                            <a href="javascript:;" class="btn btn-sm btn-outline-primary">Voir votre profil</a>
+                                            <a href="my-profile.php" class="btn btn-sm btn-outline-primary">Voir votre profil</a>
                                         </div>
                                     </div>
                                     <div class="col-sm-5 text-center text-sm-left">

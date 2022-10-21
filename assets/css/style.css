@@ -125,9 +125,9 @@
  
  .haut {
      background-image: url("../img/bank_img.jpg");
-     position: absolute;
+     position: relative;
      background-attachment: fixed;
-     height: 400px;
+     min-height: 400px;
      width: 100%;
  }
  /***Media queries***/
@@ -208,8 +208,7 @@
  
  .about {
      margin-top: 100px;
-     height: 200px;
-     border-radius: 20px;
+     height: 50px;
      background: linear-gradient(#08083db3, #08083d);
  }
  
